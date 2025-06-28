@@ -1,3 +1,11 @@
+// View Counter
+let views = localStorage.getItem('pageViews') || 0;
+views++;
+localStorage.setItem('pageViews', views);
+document.getElementById('counter').innerText = views;
+
+// Add this to your HTML where you want the counter:
+// <div>Total Views: <span id="counter">0</span></div>
 document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
     const fileInput = document.getElementById('fileInput');
